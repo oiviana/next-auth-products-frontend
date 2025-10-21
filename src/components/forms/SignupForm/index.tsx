@@ -33,7 +33,7 @@ export default function SignupForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-w-md mx-auto p-6 bg-white mt-40 shadow-md rounded-md">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-w-md mx-auto p-6 bg-white mt-24 shadow-md rounded-md">
             {/* Nome */}
             <InputDefault
                 label="Nome completo"
