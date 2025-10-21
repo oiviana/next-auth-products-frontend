@@ -29,7 +29,7 @@ export const productsService = {
 };
 
 export const usersService = {
-  createNewUser: (data: any) => api.post('/users', data),
+  createNewUser: (data: any) => api.post('/users/', data),
 };
 
 export const cartService = {
