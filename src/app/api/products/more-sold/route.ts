@@ -3,9 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
   const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL; 
   try {
-
     const token = req.headers.get("authorization");
-
 
     const res = await fetch(`${backendUrl}/products/more-sold`, {
       method: "GET",
@@ -13,9 +11,9 @@ export async function GET(req: NextRequest) {
         "Content-Type": "application/json",
         ...(token ? { Authorization: token } : {}),
       },
-      cache: "no-store", 
+      cache: "no-store",
     });
-    
+
     const data = await res.json();
 
     return NextResponse.json(data, { status: res.status });

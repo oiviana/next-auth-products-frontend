@@ -6,8 +6,7 @@ export async function GET(req: NextRequest) {
   try {
     const token = req.headers.get("authorization");
 
-    const query = req.nextUrl.search;
-    const res = await fetch(`${backendUrl}/products/all-available-for-sale${query}`, {
+    const res = await fetch(`${backendUrl}/orders/my-orders`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,10 +16,9 @@ export async function GET(req: NextRequest) {
     });
 
     const data = await res.json();
-
     return NextResponse.json(data, { status: res.status });
   } catch (error) {
-    console.error("Erro ao buscar produtos:", error);
+    console.error("Erro ao buscar pedidos:", error);
     return NextResponse.json({ error: "Erro interno no servidor" }, { status: 500 });
   }
 }
