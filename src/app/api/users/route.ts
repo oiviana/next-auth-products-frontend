@@ -6,13 +6,10 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const token = req.headers.get("authorization");
-
     const res = await fetch(`${backendUrl}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        ...(token ? { Authorization: token } : {}),
       },
       body: JSON.stringify(body),
     });
