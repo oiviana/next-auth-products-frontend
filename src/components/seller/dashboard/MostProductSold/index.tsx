@@ -9,16 +9,6 @@ export default function MostSoldProduct() {
         return <div>Carregando...</div>;
     }
 
-    if (error) {
-        console.error('Erro ao carregar produto mais vendido:', error);
-        return (
-            <div className="w-64 h-32 bg-white rounded-md shadow-md flex flex-col justify-center items-center gap-3 p-6">
-                <p className="text-2xl font-semibold">-</p>
-                <h2>Produto Mais Vendido</h2>
-                <span className="text-sm text-red-500">Erro ao carregar</span>
-            </div>
-        );
-    }
 
     if (!productData) {
         return (
