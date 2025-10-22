@@ -162,7 +162,7 @@ export default function UploadCSV() {
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
         <h4 className="text-sm font-medium text-blue-900 mb-2">Formato do CSV</h4>
         <ul className="text-xs text-blue-800 space-y-1">
-          <li>• Colunas: nome, descrição, preço, estoque</li>
+          <li>• Colunas: nome, descrição, preço, url da imagem, estoque</li>
           <li>• Use ponto e vírgula (;) como separador</li>
           <li>• A primeira linha deve conter os cabeçalhos</li>
           <li>• Preço deve usar ponto como separador decimal (ex: 29.99)</li>
