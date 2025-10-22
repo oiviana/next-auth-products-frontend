@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function DELETE(req: NextRequest) {
-  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+  const backendUrl = process.env.BACKEND_URL;
 
   try {
     const token = req.headers.get("authorization");
@@ -27,7 +27,7 @@ export async function DELETE(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
-  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+  const backendUrl = process.env.BACKEND_URL;
 
   try {
     const token = req.headers.get("authorization");
