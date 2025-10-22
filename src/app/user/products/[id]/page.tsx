@@ -38,7 +38,7 @@ export default function ProductDetailsPage() {
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
           <p className="text-gray-600 mb-6">O produto que você está procurando não existe ou não está mais disponível.</p>
           <Link
-            href="/products"
+            href="/user/products"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Voltar para produtos
