@@ -1,4 +1,4 @@
-# 📚 Documentação do Projeto Next-Auth Products
+[produtos.csv](https://github.com/user-attachments/files/23059386/produtos.csv)# 📚 Documentação do Projeto Next-Auth Products
 
 ## 📋 Visão Geral
 
@@ -340,7 +340,7 @@ Açaí Paçoca,Açaí 300ml + paçoca,18.50,https://example.com/images/acai-paco
 
 ### 📊 Exemplo de Uso
 
-O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de açaí com diferentes variações, preços e estoques. Você pode usar este arquivo como base para criar seus próprios produtos.
+O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de açaí com diferentes variações, preços e estoques. Você pode usar este arquivo como base para criar seus próprios produtos:
 
 ### 📥 Download do Arquivo de Exemplo
 
