@@ -1,3 +1,4 @@
+// app/api/users/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -5,6 +6,13 @@ export async function POST(req: NextRequest) {
 
   try {
     const body = await req.json();
+
+    if (!body.email || !body.password) {
+      return NextResponse.json(
+        { error: "Email e senha são obrigatórios" },
+        { status: 400 }
+      );
+    }
 
     const res = await fetch(`${backendUrl}/users`, {
       method: "POST",
