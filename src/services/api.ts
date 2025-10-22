@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: `https://${process.env.NEXT_PUBLIC_BACKEND_URL}`,
+  baseURL: "/api",
 });
 
 api.interceptors.request.use((config) => {
@@ -14,9 +14,12 @@ api.interceptors.request.use((config) => {
 
 export const productsService = {
   getProductsBySeller: () => api.get('/products/all-products-by-seller'),
+
   getCountBySeller: () => api.get('/products/count-products-by-seller'),
+
   getAvailableProducts: (params?: { page?: number; limit?: number }) =>
     api.get('/products/all-available-for-sale', { params }),
+  
   getProductDetails: (id: string) => api.get(`/products/${id}`),
 
   createProduct: (data: {
