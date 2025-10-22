@@ -20,6 +20,8 @@ export default function UploadCSV() {
       const formData = new FormData()
       formData.append("file", file)
 
+
+
       const { data } = await api.post("/upload/csv", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -88,7 +90,14 @@ export default function UploadCSV() {
                 </svg>
                 <div>
                   <p className="text-sm font-medium text-gray-900">{file.name}</p>
-                  <p className="text-xs text-gray-500">{(file.size / 1024 / 1024).toFixed(2)} MB</p>
+                  <p className="text-xs text-gray-500">
+                    {file.size >= 1024 * 1024
+                      ? `${(file.size / 1024 / 1024).toFixed(2)} MB`
+                      : file.size >= 1024
+                        ? `${(file.size / 1024).toFixed(2)} KB`
+                        : `${file.size} Bytes`
+                    }
+                  </p>
                 </div>
               </div>
               <button
@@ -130,11 +139,10 @@ export default function UploadCSV() {
 
       {/* Message */}
       {message && (
-        <div className={`p-4 rounded-lg ${
-          message.includes('sucesso') 
-            ? 'bg-green-50 border border-green-200 text-green-800' 
+        <div className={`p-4 rounded-lg ${message.includes('sucesso')
+            ? 'bg-green-50 border border-green-200 text-green-800'
             : 'bg-red-50 border border-red-200 text-red-800'
-        }`}>
+          }`}>
           <div className="flex items-center">
             {message.includes('sucesso') ? (
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
