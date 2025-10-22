@@ -1,4 +1,4 @@
-# 📚 Documentação do Projeto Next-Auth Products
+[produtos.csv](https://github.com/user-attachments/files/23059386/produtos.csv)# 📚 Documentação do Projeto Next-Auth Products
 
 ## 📋 Visão Geral
 
@@ -340,7 +340,20 @@ Açaí Paçoca,Açaí 300ml + paçoca,18.50,https://example.com/images/acai-paco
 
 ### 📊 Exemplo de Uso
 
-O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de açaí com diferentes variações, preços e estoques. Você pode usar este arquivo como base para criar seus próprios produtos.
+O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de açaí com diferentes variações, preços e estoques. Você pode usar este arquivo como base para criar seus próprios produtos:
+
+[Uploading pname,description,price,imageUrl,stock
+Açaí Tradicional,Açaí 300ml,12.50,https://example.com/images/acai-tradicional.jpg,50
+Açaí com Granola,Açaí 300ml + granola,15.00,https://example.com/images/acai-granola.jpg,30
+Açaí Banana Split,Açaí 500ml com banana e chocolate,20.00,https://example.com/images/acai-banana.jpg,20
+Açaí Morango,,18.00,,25
+Açaí Chocolate,Açaí 500ml + chocolate,22.00,https://example.com/images/acai-chocolate.jpg,15
+Açaí Nutella,Açaí 500ml + Nutella,25.00,https://example.com/images/acai-nutella.jpg,10
+Açaí Kiwi,Açaí 300ml + kiwi,17.50,https://example.com/images/acai-kiwi.jpg,40
+Açaí Mix Frutas,Açaí 300ml + frutas variadas,19.00,https://example.com/images/acai-mix-frutas.jpg,35
+Açaí Doce de Leite,Açaí 300ml + doce de leite,21.00,https://example.com/images/acai-doce-leite.jpg,12
+Açaí Paçoca,Açaí 300ml + paçoca,18.50,https://example.com/images/acai-pacoca.jpg,18
+rodutos.csv…]()
 
 ### 🔧 Tratamento de Erros
 
