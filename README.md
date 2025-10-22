@@ -1,4 +1,4 @@
-[produtos.csv](https://github.com/user-attachments/files/23059386/produtos.csv)# 📚 Documentação do Projeto Next-Auth Products
+# 📚 Documentação do Projeto Next-Auth Products
 
 ## 📋 Visão Geral
 
@@ -346,7 +346,7 @@ O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de a�
 
 Para facilitar o teste da funcionalidade, você pode baixar o arquivo de exemplo:
 
-**[📄 Baixar produtos.csv](https://localhost:3000/csv/produtos.csv)**
+[produtos.csv](https://github.com/user-attachments/files/23059386/produtos.csv)
 
 Este arquivo contém 10 produtos de açaí com diferentes variações e pode ser usado como template para seus próprios produtos.
 
