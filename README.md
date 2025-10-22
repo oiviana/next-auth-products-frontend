@@ -289,6 +289,73 @@ O sistema utiliza autenticação baseada em JWT:
 - Monitoramento de expiração do token
 - Redirecionamento automático para login
 
+
+## 📄 Upload de CSV
+
+O sistema permite que vendedores façam upload de produtos em lote através de arquivos CSV. Esta funcionalidade facilita a criação de múltiplos produtos de uma só vez.
+
+### 📋 Formato do Arquivo CSV
+
+O arquivo CSV deve seguir o formato abaixo com as seguintes colunas obrigatórias:
+
+```csv
+name,description,price,imageUrl,stock
+Açaí Tradicional,Açaí 300ml,12.50,https://example.com/images/acai-tradicional.jpg,50
+Açaí com Granola,Açaí 300ml + granola,15.00,https://example.com/images/acai-granola.jpg,30
+Açaí Banana Split,Açaí 500ml com banana e chocolate,20.00,https://example.com/images/acai-banana.jpg,20
+Açaí Morango,,18.00,,25
+Açaí Chocolate,Açaí 500ml + chocolate,22.00,https://example.com/images/acai-chocolate.jpg,15
+Açaí Nutella,Açaí 500ml + Nutella,25.00,https://example.com/images/acai-nutella.jpg,10
+Açaí Kiwi,Açaí 300ml + kiwi,17.50,https://example.com/images/acai-kiwi.jpg,40
+Açaí Mix Frutas,Açaí 300ml + frutas variadas,19.00,https://example.com/images/acai-mix-frutas.jpg,35
+Açaí Doce de Leite,Açaí 300ml + doce de leite,21.00,https://example.com/images/acai-doce-leite.jpg,12
+Açaí Paçoca,Açaí 300ml + paçoca,18.50,https://example.com/images/acai-pacoca.jpg,18
+```
+
+### 📝 Especificações das Colunas
+
+| Coluna | Tipo | Obrigatório | Descrição |
+|--------|------|-------------|-----------|
+| `name` | string | ✅ | Nome do produto (máximo 100 caracteres) |
+| `description` | string | ❌ | Descrição detalhada do produto |
+| `price` | number | ✅ | Preço do produto (formato decimal: 12.50) |
+| `imageUrl` | string | ❌ | URL da imagem do produto |
+| `stock` | number | ✅ | Quantidade em estoque (número inteiro) |
+
+### ⚠️ Regras de Validação
+
+- **Nome**: Obrigatório, não pode estar vazio
+- **Preço**: Deve ser um número decimal positivo (ex: 12.50)
+- **Estoque**: Deve ser um número inteiro não negativo (0 ou maior)
+- **Descrição**: Opcional, pode estar vazia
+- **Imagem**: Opcional, deve ser uma URL válida se fornecida
+
+### 🚀 Como Usar
+
+1. **Acesse a área do vendedor**
+2. **Navegue até "Produtos" → "Novo Produto"**
+3. **Clique em "Upload CSV"**
+4. **Selecione seu arquivo CSV**
+5. **Clique em "Enviar"**
+
+### 📊 Exemplo de Uso
+
+O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de açaí com diferentes variações, preços e estoques. Você pode usar este arquivo como base para criar seus próprios produtos.
+
+### 🔧 Tratamento de Erros
+
+O sistema valida cada linha do CSV e retorna:
+- ✅ **Sucesso**: Produtos criados com sucesso
+- ⚠️ **Avisos**: Linhas com problemas menores (ex: descrição vazia)
+- ❌ **Erros**: Linhas com problemas críticos (ex: preço inválido)
+
+### 💡 Dicas
+
+- Use vírgulas como separadores decimais para preços
+- Mantenha URLs de imagens válidas
+- Verifique o estoque antes do upload
+- Teste com poucos produtos primeiro
+
 ## 📊 Estado da Aplicação
 
 - **React Query** para cache e sincronização de dados do servidor
