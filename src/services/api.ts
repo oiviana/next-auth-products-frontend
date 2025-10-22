@@ -12,6 +12,10 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+export const usersService = {
+  createNewUser: (data: any) => api.post('/users/', data),
+};
+
 export const productsService = {
   getProductsBySeller: () => api.get('/products/all-products-by-seller'),
 
@@ -19,7 +23,7 @@ export const productsService = {
 
   getAvailableProducts: (params?: { page?: number; limit?: number }) =>
     api.get('/products/all-available-for-sale', { params }),
-  
+
   getProductDetails: (id: string) => api.get(`/products/${id}`),
 
   createProduct: (data: {
@@ -31,9 +35,7 @@ export const productsService = {
   }) => api.post('/products', data),
 };
 
-export const usersService = {
-  createNewUser: (data: any) => api.post('/users/', data),
-};
+
 
 export const cartService = {
   addItem: (data: { productId: string; quantity: number }) =>
