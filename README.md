@@ -342,6 +342,14 @@ Açaí Paçoca,Açaí 300ml + paçoca,18.50,https://example.com/images/acai-paco
 
 O arquivo `produtos.csv` fornecido contém um exemplo completo de produtos de açaí com diferentes variações, preços e estoques. Você pode usar este arquivo como base para criar seus próprios produtos.
 
+### 📥 Download do Arquivo de Exemplo
+
+Para facilitar o teste da funcionalidade, você pode baixar o arquivo de exemplo:
+
+**[📄 Baixar produtos.csv](https://localhost:3000/csv/produtos.csv)**
+
+Este arquivo contém 10 produtos de açaí com diferentes variações e pode ser usado como template para seus próprios produtos.
+
 ### 🔧 Tratamento de Erros
 
 O sistema valida cada linha do CSV e retorna:
