@@ -23,7 +23,7 @@ export default function AllSellerProducts() {
   if (!products?.length) return <div>Nenhum produto encontrado</div>;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 px-4">
       <h3 className="text-xl font-bold">Seus Produtos ({products.length})</h3>
       
       <div className="space-y-3">
