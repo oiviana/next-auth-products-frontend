@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    if (!body.email || !body.password) {
+    if (!body.email || !body.passwordHash) {
       return NextResponse.json(
         { error: "Email e senha são obrigatórios" },
         { status: 400 }
